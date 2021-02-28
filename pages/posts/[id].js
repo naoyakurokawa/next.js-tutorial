@@ -23,7 +23,7 @@ export default function Post({ postData }) {
 
 //1. getStaticPathsで、この[id].jsでは、どんなページを表示する可能性があるのかを判断
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths = await getAllPostIds()
   return {
     paths,
     fallback: false
